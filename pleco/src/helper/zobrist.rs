@@ -27,7 +27,7 @@ pub fn init_zobrist() {
 
     unsafe {
         for i in 0..SQ_CNT {
-            for j in (Piece::WhitePawn as usize)..(Piece::BlackKing as usize) {
+            for j in (Piece::WhitePawn as usize)..=(Piece::BlackKing as usize) {
                 ZOBRIST_PIECE_SQUARE[i][j] = rng.rand();
                 ZOBRIST_PIECE_SQUARE[i][j] = rng.rand();
             }
